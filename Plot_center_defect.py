@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 plate_size = 400  # plate size (mm)
 mesh_size = 0.25  # mesh size (mm)
 tau_0 = 0.7e-6    # attenuation factor (s)
-v = 2865          # velocity (m/s)
+v = 2830          # velocity (m/s)
 
 # Discretization of plate
 x = np.arange(0, plate_size + mesh_size, mesh_size)
@@ -20,31 +20,6 @@ sensor_positions = np.array([
     [330, 70]   # Bottom-left   # Bottom-left
 ])
 
-# D2 Sensor positions
-#sensor_positions = np.array([
-  #  [70, 330],   # Top-left
-   # [330, 330],    # Top-right
-  #  [330, 70],   # Bottom-right
-  #  [70, 70]   # Bottom-left   # Bottom-left
-#])
-
-# D2 Sensor positions
-#sensor_positions = np.array([
-  #  [330, 70],   # Top-left
-   # [70, 70],    # Top-right
-  #  [70, 330],   # Bottom-right
-  #  [330, 330]   # Bottom-left   # Bottom-left
-#])
-
-# D2 Sensor positions
-#sensor_positions = np.array([
-  #  [330, 330],   # Top-left
-   # [330, 70],    # Top-right
-  #  [70, 70],   # Bottom-right
-  #  [70, 330]   # Bottom-left   # Bottom-left
-#])
-
-
 # Path pairs
 path_pairs = np.array([
     [1, 2], [1, 3], [1, 4],
@@ -55,7 +30,7 @@ path_pairs = np.array([
 
 # TOF simulation (assuming Ellips.xlsx is not available, placeholder for data)
 # Replace with actual data loading if file is available
-TOF_experimental = np.loadtxt("T1.csv")  # Example, adjust as needed
+TOF_experimental = np.loadtxt("Center_Defect_10mm.csv")  # Example, adjust as needed
 
 # Initialize probability matrix
 p = np.zeros_like(X)
@@ -96,3 +71,5 @@ plt.ylabel('Y Position (mm)')
 plt.title('10mm Defect Probability Distribution')
 plt.axis('equal')
 plt.savefig('defect_probability.png')
+
+#plt.show()  # show the plot
