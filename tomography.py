@@ -13,20 +13,36 @@ y = np.arange(0, plate_size + mesh_size, mesh_size)
 X, Y = np.meshgrid(x, y)
 
 # D1 Sensor positions
+sensor_positions = np.array([
+      [70, 70],   # Top-left
+   [70, 330],    # Top-right
+    [330, 330],   # Bottom-right
+    [330, 70]   # Bottom-left   # Bottom-left
+])
+
+# D2 Sensor positions
 #sensor_positions = np.array([
-  #     [70, 70],   # Top-left
- #   [70, 330],    # Top-right
- #   [330, 330],   # Bottom-right
- #   [330, 70]   # Bottom-left   # Bottom-left
+  #  [70, 330],   # Top-left
+   # [330, 330],    # Top-right
+  #  [330, 70],   # Bottom-right
+  #  [70, 70]   # Bottom-left   # Bottom-left
 #])
 
 # D2 Sensor positions
-sensor_positions = np.array([
-    [70, 330],   # Top-left
-    [330, 330],    # Top-right
-    [330, 70],   # Bottom-right
-    [70, 70]   # Bottom-left   # Bottom-left
-])
+#sensor_positions = np.array([
+  #  [330, 70],   # Top-left
+   # [70, 70],    # Top-right
+  #  [70, 330],   # Bottom-right
+  #  [330, 330]   # Bottom-left   # Bottom-left
+#])
+
+# D2 Sensor positions
+#sensor_positions = np.array([
+  #  [330, 330],   # Top-left
+   # [330, 70],    # Top-right
+  #  [70, 70],   # Bottom-right
+  #  [70, 330]   # Bottom-left   # Bottom-left
+#])
 
 
 # Path pairs
